@@ -26,22 +26,21 @@ const Home = ({ navigation }: { navigation: any }) => {
 
   ////USE EFFECT
 
-
   const pizza: Pizza[] = [
     {
       nom: "Reine",
       img: require("../src/img/pizza_reine.jpg"),
-      ingredients: "jambon, champignon,emmental",
+      ingredients: "jambon, champignons,emmental",
       price: 8,
-      allergen: "Gluten,Lait",
+      allergen: "Gluten,lait",
       key: "1",
     },
     {
       nom: "Chorizo",
       img: require("../src/img/pizza.jpg"),
-      ingredients: "chorizo, champignon,emmental",
+      ingredients: "chorizo, champignons,emmental",
       price: 9,
-      allergen: "Gluten,Lait",
+      allergen: "Gluten,lait",
       key: "2",
     },
     {
@@ -49,12 +48,11 @@ const Home = ({ navigation }: { navigation: any }) => {
       img: require("../src/img/pizza_fromage.jpg"),
       ingredients: "mozza, bleu,emmental,raclette",
       price: 10,
-      allergen: "Gluten,Lait",
+      allergen: "Gluten,lait",
       key: "3",
     },
   ];
-///OBJET
-
+  ///OBJET
 
   return (
     <View style={styles.body}>
@@ -102,7 +100,10 @@ const Home = ({ navigation }: { navigation: any }) => {
                     navigation.navigate("Cart");
                   }}
                 >
-                  <Image source={require("../src/img/plus.png")} />
+                  <Image
+                    style={{ height: 30, width: 30 }}
+                    source={require("../src/img/plus.png")}
+                  />
                 </Pressable>
               </View>
             </TouchableOpacity>
@@ -178,11 +179,13 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   btn: {
+    height: 50,
+    width: 50,
     position: "absolute",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     alignItems: "center",
-    bottom: 5,
-    right: 5,
+    bottom: 1,
+    right: -2,
   },
 });
 ////STYLE

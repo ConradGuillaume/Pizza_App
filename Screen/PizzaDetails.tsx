@@ -11,7 +11,9 @@ const PizzaDetails = ({ route }: { route: any }) => {
         <Image style={styles.pizzaImg} source={route.params.img} />
         <Text style={styles.ingredients}>Composition:</Text>
         <Text style={styles.ingredients}>{route.params.ingredients}</Text>
-        <Text>Allergène: {route.params.allergen} </Text>
+        <Text style={{ marginTop: 5 }}>
+          Allergènes: {route.params.allergen}{" "}
+        </Text>
       </View>
     </View>
   );
@@ -39,8 +41,8 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     backgroundColor: "#ae9880",
     justifyContent: "flex-start",
-    width: "80%",
-    height: 400,
+    width: "85%",
+    height: 420,
   },
   pizzaImg: {
     justifyContent: "center",

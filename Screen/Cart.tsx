@@ -58,7 +58,7 @@ const Cart = ({ navigation }: { navigation: any }) => {
             style={{
               width: "100%",
               backgroundColor: "#B22222",
-              marginBottom: 30,
+              marginBottom: 50,
             }}
             data={cart}
             renderItem={({ item }: { item: any }) => (
@@ -86,17 +86,17 @@ const Cart = ({ navigation }: { navigation: any }) => {
                       +
                     </Text>
                   </View>
-                  <Pressable
-                    onPress={() => {
-                      dispatch(removeFromCart(item));
-                    }}
-                    style={styles.delete}
-                  >
-                    <Text style={{ color: "red", fontWeight: "bold" }}>
-                      Annuler
-                    </Text>
-                  </Pressable>
                 </View>
+                <Pressable
+                  onPress={() => {
+                    dispatch(removeFromCart(item));
+                  }}
+                  style={styles.delete}
+                >
+                  <Text style={{ color: "red", fontWeight: "bold" }}>
+                    Annuler
+                  </Text>
+                </Pressable>
                 <Text style={styles.PizzaName}>
                   {" "}
                   Pizza: {item.nom} {item.price}€
@@ -139,6 +139,7 @@ const Cart = ({ navigation }: { navigation: any }) => {
           <Text
             onPress={() => {
               navigation.navigate("Thank");
+              dispatch(clearCart([]));
             }}
             style={{
               backgroundColor: "green",
@@ -204,39 +205,44 @@ const styles = StyleSheet.create({
   Quantity: {
     backgroundColor: "white",
     textAlign: "center",
+    textAlignVertical: "center",
     fontSize: 15,
     fontWeight: "900",
-    width: "60%",
+    width: "40%",
   },
   btn: {
     flexDirection: "row",
-    borderWidth: 2,
-    backgroundColor: "black",
-    width: 80,
+
+    backgroundColor: "green",
+    width: 90,
+    height: 40,
     justifyContent: "space-around",
-    borderRadius: 50,
   },
   btnContainer: {
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
     height: 30,
-    bottom: 15,
-    right: 15,
+    top: 37,
+    right: 0,
   },
   btnPlusMinus: {
     height: "100%",
     width: "20%",
     textAlign: "center",
-    fontSize: 18,
+    textAlignVertical: "center",
+    fontSize: 28,
     fontWeight: "900",
     color: "white",
   },
   delete: {
-    backgroundColor: "black",
+    position: "absolute",
+    borderWidth: 1,
+    bottom: 0,
+    right: 0,
     borderRadius: 10,
-    width: "100%",
-    height: "100%",
+    width: 80,
+    height: 30,
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
