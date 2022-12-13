@@ -5,9 +5,7 @@ import PizzaDetails from "../Screen/PizzaDetails";
 import Cart from "../Screen/Cart";
 import Thank from "../Screen/Thank";
 
-
-///IMPORT 
-
+///IMPORT
 
 export type RouteParams = {
   Home: undefined;
@@ -15,8 +13,7 @@ export type RouteParams = {
   Cart: undefined;
   Thank: undefined;
 };
-/// EXPORT 
-
+/// EXPORT
 
 const Stack = createNativeStackNavigator<RouteParams>();
 

@@ -98,7 +98,6 @@ const Cart = ({ navigation }: { navigation: any }) => {
                   </Text>
                 </Pressable>
                 <Text style={styles.PizzaName}>
-                  {" "}
                   Pizza: {item.nom} {item.price}€
                 </Text>
                 <Image style={styles.PizzaStyle} source={item.img} />

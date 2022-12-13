@@ -91,6 +91,7 @@ const Home = ({ navigation }: { navigation: any }) => {
               }}
             >
               <View style={styles.PizzaContainer}>
+                <Text style={styles.PizzaPrice}>{item.price}€</Text>
                 <Text style={styles.PizzaName}> La {item.nom}</Text>
                 <Image style={styles.PizzaStyle} source={item.img} />
                 <Pressable
@@ -160,6 +161,7 @@ const styles = StyleSheet.create({
   },
   PizzaContainer: {
     width: 200,
+    overflow: "hidden",
     marginBottom: 11,
     justifyContent: "center",
     alignItems: "center",
@@ -186,6 +188,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     bottom: 1,
     right: -2,
+  },
+  PizzaPrice: {
+    position: "absolute",
+    fontSize: 18,
+    backgroundColor: "green",
+    height: 35,
+    width: 45,
+    paddingLeft: 5,
+    fontWeight: "bold",
+    textAlignVertical: "center",
+    borderRadius: 50,
+    top: -5,
+    right: -9,
   },
 });
 ////STYLE
